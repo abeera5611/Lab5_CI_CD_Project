@@ -1,0 +1,19 @@
+ name: run python test
+
+ on: [push]
+ 
+ jobs:
+   test:
+      run-on: ubuntu-latest
+
+   steps:
+   
+    - uses: actions/checkout@v4
+
+
+     - uses: actions/steup-python@v5
+       with:
+          python-version: '3.10'
+
+       - ru : python -m unittest discover
+         
